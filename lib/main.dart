@@ -1,46 +1,50 @@
 import 'package:flutter/material.dart';
 
+import 'person.dart';
+import 'person_data.dart';
+import 'style.dart';
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final String circleAvatarImgUrl =
-      'https://yt3.ggpht.com/a/AGF-l7_p35s8NY-EOwhcv9cgmj1RB2s4jkQyR7YoKQ=s900-mo-c-c0xffffffff-rj-k-no';
-  final String circleAvatarImg = 'images/tulio.jpg';
-  final String fontFamilyPacifico = 'Pacifico';
-  final String fontFamilySourceSansPro = 'Source Sans Pro';
-  final String phoneNumber = '+55 (41)99566-7914';
-  final String emailAddress = 'francatm@outlook.com';
+  final Person person = Person(
+    circleAvatarImg: circleAvatarImgMock,
+    name: nameMock,
+    jobTitle: jobTitleMock,
+    phoneNumber: phoneNumberMock,
+    emailAddress: emailAddressMock,
+  );
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: primaryColor,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage(circleAvatarImg),
+                backgroundImage: AssetImage(person.circleAvatarImg),
               ),
               Text(
-                'Túlio M. França',
+                person.name,
                 style: TextStyle(
-                  fontFamily: fontFamilyPacifico,
+                  fontFamily: fontFamilyPrimary,
                   fontSize: 40.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                'FLUTTER DEVELOPER',
+                'Flutter Developer',
                 style: TextStyle(
-                  fontFamily: fontFamilySourceSansPro,
+                  fontFamily: fontFamilySecondary,
                   fontSize: 20.0,
-                  color: Colors.teal.shade100,
+                  color: secondaryColorShade100,
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
@@ -50,7 +54,7 @@ class MyApp extends StatelessWidget {
                 width: 150.0,
                 child: Divider(
                   height: 1.0,
-                  color: Colors.teal.shade100,
+                  color: secondaryColorShade100,
                 ),
               ),
               Card(
@@ -61,13 +65,13 @@ class MyApp extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
-                    color: Colors.teal,
+                    color: primaryColor,
                   ),
                   title: Text(
-                    phoneNumber,
+                    person.phoneNumber,
                     style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: fontFamilySourceSansPro,
+                      color: secondaryColorShade900,
+                      fontFamily: fontFamilySecondary,
                       fontSize: 20.0,
                     ),
                   ),
@@ -81,13 +85,13 @@ class MyApp extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(
                     Icons.email,
-                    color: Colors.teal,
+                    color: primaryColor,
                   ),
                   title: Text(
-                    emailAddress,
+                    person.emailAddress,
                     style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: fontFamilySourceSansPro,
+                      color: secondaryColorShade900,
+                      fontFamily: fontFamilySecondary,
                       fontSize: 20.0,
                     ),
                   ),

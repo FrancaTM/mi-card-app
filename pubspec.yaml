@@ -25,11 +25,11 @@ flutter:
     - images/tulio.jpg
 
   fonts:
-    - family: Pacifico
+    - family: Caveat
       fonts:
-        - asset: fonts/Pacifico-Regular.ttf
+        - asset: fonts/Caveat-Regular.ttf
 
-    - family: Source Sans Pro
+    - family: Ubuntu
       fonts:
-        - asset: fonts/SourceSansPro-Regular.ttf
+        - asset: fonts/Ubuntu-Regular.ttf
 
