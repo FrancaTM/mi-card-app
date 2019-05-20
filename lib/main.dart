@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
   final String circleAvatarImg = 'images/tulio.jpg';
   final String fontFamilyPacifico = 'Pacifico';
   final String fontFamilySourceSansPro = 'Source Sans Pro';
+  final String phoneNumber = '+55 (41)99566-7914';
+  final String emailAddress = 'francatm@outlook.com';
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -42,58 +45,52 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+55 (41)99566-7914',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  height: 1.0,
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    phoneNumber,
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: fontFamilySourceSansPro,
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    emailAddress,
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: fontFamilySourceSansPro,
+                      fontSize: 20.0,
                     ),
-                    Text(
-                      'francatm@outlook.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: fontFamilySourceSansPro,
-                        fontSize: 20.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
