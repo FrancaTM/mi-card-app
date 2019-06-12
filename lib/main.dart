@@ -1,8 +1,10 @@
 import 'package:flutter_web/material.dart';
 
-import 'person.dart';
-import 'person_data.dart';
-import 'style.dart';
+import 'package:mi_card_app/person.dart';
+import 'package:mi_card_app/person_data.dart';
+import 'package:mi_card_app/style.dart';
+
+//TODO: UPDATE BROKEN REFERENCES -> CHECK: https://www.didierboelens.com/2019/05/flutter-for-the-web/
 
 void main() {
   runApp(MyApp());

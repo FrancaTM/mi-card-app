@@ -1,0 +1,18 @@
+[
+  {
+    "family": "Caveat",
+    "fonts": [
+      {
+        "asset": "fonts/Caveat-Regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Ubuntu",
+    "fonts": [
+      {
+        "asset": "fonts/Ubuntu-Regular.ttf"
+      }
+    ]
+  }
+]
